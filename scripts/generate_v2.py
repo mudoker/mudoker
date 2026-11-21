@@ -750,7 +750,7 @@ def generate_overview_activity(metrics, is_dark=True):
       <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
       <circle cx="12" cy="14" r="3" fill="{accent_blue}"/>
       <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Systems Engineering</text>
-      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Linux Kernel &#8226; C / Go &#8226; Drivers &#8226; 0.0% FAR Biometrics</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Linux &#8226; C &#8226; Go &#8226; Performance</text>
       <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_blue}">01</text>
     </g>
 
@@ -759,7 +759,7 @@ def generate_overview_activity(metrics, is_dark=True):
       <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
       <circle cx="12" cy="14" r="3" fill="{accent_emerald}"/>
       <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Software Architecture</text>
-      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">High-Throughput Backends &#8226; TUI Runtimes &#8226; WAL Sync</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Backend &#8226; Full-Stack &#8226; Distributed Systems</text>
       <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_emerald}">02</text>
     </g>
 
@@ -768,7 +768,7 @@ def generate_overview_activity(metrics, is_dark=True):
       <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
       <circle cx="12" cy="14" r="3" fill="{accent_purple}"/>
       <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Applied Intelligence</text>
-      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Gemini Multimodal Live &#8226; Audio Worklet DSP &#8226; WebSockets</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Multimodal &#8226; Inference &#8226; Machine Learning</text>
       <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_purple}">03</text>
     </g>
   </g>
