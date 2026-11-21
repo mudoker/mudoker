@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="line_area_dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="958" height="378" x="1" y="1" rx="14" fill="#0B0F17" stroke="#1E293B" stroke-width="1.2"/>
+
+  <!-- Top Header -->
+  <text x="24" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#38BDF8" letter-spacing="1">ENGINEERING TELEMETRY &amp; METRICS</text>
+  <text x="285" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#94A3B8">// THROUGHPUT VELOCITY &amp; STACK COMPOSITION</text>
+
+  <circle cx="934" cy="21" r="3.5" fill="#34D399"/>
+  <text x="924" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#34D399">LIVE TELEMETRY</text>
+
+  <!-- Left: Line Chart Panel (Bounded x=24..524) -->
+  <rect x="24" y="44" width="500" height="316" rx="8" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="42" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="700" fill="#F1F5F9">Commit Velocity &amp; Cadence Trajectory</text>
+  <text x="42" y="83" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">12-MONTH ACTIVITY // +2,485 COMMITS // 509 PEAK</text>
+
+  <!-- Line Chart Badge (Safe inside card bounds: 372 + 108 = 480 < 500) -->
+  <g transform="translate(372, 54)">
+    <rect width="108" height="22" rx="4" fill="rgba(30, 41, 59, 0.6)" stroke="#334155" stroke-width="1"/>
+    <circle cx="12" cy="11" r="3" fill="#38BDF8"/>
+    <text x="22" y="14.5" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#F1F5F9">205.2 AVG / MO</text>
+  </g>
+
+  <!-- Plot Area -->
+  <line x1="72" y1="275.0" x2="504" y2="275.0" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="64" y="278.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">0</text>
+<line x1="72" y1="235.0" x2="504" y2="235.0" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="64" y="238.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">150</text>
+<line x1="72" y1="195.0" x2="504" y2="195.0" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="64" y="198.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">300</text>
+<line x1="72" y1="155.0" x2="504" y2="155.0" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="64" y="158.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">450</text>
+<line x1="72" y1="115.0" x2="504" y2="115.0" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="3 3"/>
+<text x="64" y="118.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">600</text>
+
+  <path d="M 72.0 145.9 L 111.3 184.6 L 150.5 252.6 L 189.8 244.9 L 229.1 239.5 L 268.4 252.1 L 307.6 139.3 L 346.9 214.7 L 386.2 266.2 L 425.5 255.3 L 464.7 195.8 L 504.0 252.3 L 504.0 275 L 72.0 275 Z" fill="url(#line_area_dark)"/>
+  <path d="M 72.0 145.9 L 111.3 165.3 L 150.5 194.4 L 189.8 227.3 L 229.1 245.7 L 268.4 245.5 L 307.6 210.3 L 346.9 202.0 L 386.2 206.7 L 425.5 245.4 L 464.7 239.1 L 504.0 234.5" fill="none" stroke="#34D399" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+  <path d="M 72.0 145.9 L 111.3 184.6 L 150.5 252.6 L 189.8 244.9 L 229.1 239.5 L 268.4 252.1 L 307.6 139.3 L 346.9 214.7 L 386.2 266.2 L 425.5 255.3 L 464.7 195.8 L 504.0 252.3" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72.0" cy="145.9" r="2.5" fill="#38BDF8"/>
+<circle cx="111.3" cy="184.6" r="2.5" fill="#38BDF8"/>
+<circle cx="150.5" cy="252.6" r="2.5" fill="#38BDF8"/>
+<circle cx="189.8" cy="244.9" r="2.5" fill="#38BDF8"/>
+<circle cx="229.1" cy="239.5" r="2.5" fill="#38BDF8"/>
+<circle cx="268.4" cy="252.1" r="2.5" fill="#38BDF8"/>
+<circle cx="307.6" cy="139.3" r="4" fill="#38BDF8" stroke="#111827" stroke-width="2"/>
+<circle cx="307.6" cy="139.3" r="8" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+<circle cx="346.9" cy="214.7" r="2.5" fill="#38BDF8"/>
+<circle cx="386.2" cy="266.2" r="2.5" fill="#38BDF8"/>
+<circle cx="425.5" cy="255.3" r="2.5" fill="#38BDF8"/>
+<circle cx="464.7" cy="195.8" r="2.5" fill="#38BDF8"/>
+<circle cx="504.0" cy="252.3" r="2.5" fill="#38BDF8"/>
+
+  <text x="72.0" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">DEC</text>
+<text x="111.3" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">JAN</text>
+<text x="150.5" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">FEB</text>
+<text x="189.8" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">MAR</text>
+<text x="229.1" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">APR</text>
+<text x="268.4" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">MAY</text>
+<text x="307.6" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">JUN</text>
+<text x="346.9" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">JUL</text>
+<text x="386.2" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">AUG</text>
+<text x="425.5" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">SEP</text>
+<text x="464.7" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">OCT</text>
+<text x="504.0" y="291" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">NOV</text>
+
+
+  <!-- Peak callout badge (Safely clamped inside plot area) -->
+  <g transform="translate(269.6, 111.3)">
+    <rect width="76" height="20" rx="4" fill="#0B0F17" stroke="#38BDF8" stroke-width="1"/>
+    <text x="38" y="13.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#38BDF8">JUN PEAK 509</text>
+  </g>
+
+  <!-- Legend bottom -->
+  <g transform="translate(44, 336)">
+    <line x1="0" y1="6" x2="16" y2="6" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="8" cy="6" r="2" fill="#38BDF8"/>
+    <text x="22" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">Monthly Volume</text>
+
+    <line x1="130" y1="6" x2="146" y2="6" stroke="#34D399" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <text x="152" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94A3B8">Rolling Average</text>
+  </g>
+
+  <!-- Right: Top - Pie Chart Panel (Bounded x=542..936 // Truncated labels with ellipsis) -->
+  <rect x="542" y="44" width="394" height="150" rx="8" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="558" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" font-weight="700" fill="#F1F5F9">Language Composition</text>
+  <text x="558" y="82" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">PUBLIC &amp; PRIVATE CODEBASES // REALTIME COMPUTED</text>
+
+  <!-- Pie Chart -->
+  <path d="M 618 126 L 618.00 82.00 A 44 44 0 0 1 650.07 156.12 Z" fill="#38BDF8" stroke="#111827" stroke-width="2"/>
+<path d="M 618 126 L 650.07 156.12 A 44 44 0 0 1 578.19 144.73 Z" fill="#34D399" stroke="#111827" stroke-width="2"/>
+<path d="M 618 126 L 578.19 144.73 A 44 44 0 0 1 576.15 112.40 Z" fill="#A78BFA" stroke="#111827" stroke-width="2"/>
+<path d="M 618 126 L 576.15 112.40 A 44 44 0 0 1 618.00 82.00 Z" fill="#FBBF24" stroke="#111827" stroke-width="2"/>
+
+  
+        <g transform="translate(684, 92)">
+          <rect x="0" y="0" width="8" height="8" rx="2" fill="#38BDF8"/>
+          <text x="14" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#F1F5F9">C</text>
+          <text x="234" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38BDF8">37%</text>
+        </g>
+        
+        <g transform="translate(684, 110)">
+          <rect x="0" y="0" width="8" height="8" rx="2" fill="#34D399"/>
+          <text x="14" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#F1F5F9">TypeScript</text>
+          <text x="234" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34D399">31%</text>
+        </g>
+        
+        <g transform="translate(684, 128)">
+          <rect x="0" y="0" width="8" height="8" rx="2" fill="#A78BFA"/>
+          <text x="14" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#F1F5F9">Go</text>
+          <text x="234" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#A78BFA">12%</text>
+        </g>
+        
+        <g transform="translate(684, 146)">
+          <rect x="0" y="0" width="8" height="8" rx="2" fill="#FBBF24"/>
+          <text x="14" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#F1F5F9">Python &amp; Other</text>
+          <text x="234" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FBBF24">20%</text>
+        </g>
+        
+
+  <!-- Right: Bottom - Bar Chart Panel (Bounded x=542..936) -->
+  <rect x="542" y="210" width="394" height="150" rx="8" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="558" y="234" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" font-weight="700" fill="#F1F5F9">Commit Cadence by Weekday</text>
+  <text x="558" y="248" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">HISTORICAL CADENCE // PEAK: SAT</text>
+
+  <!-- Badge (Safe bounds: 816 + 104 = 920 < 936) -->
+  <g transform="translate(816, 222)">
+    <rect width="104" height="20" rx="4" fill="rgba(30, 41, 59, 0.6)" stroke="#334155" stroke-width="1"/>
+    <circle cx="10" cy="10" r="2.5" fill="#34D399"/>
+    <text x="18" y="13.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#34D399">SAT PEAK 19%</text>
+  </g>
+
+  <!-- Bar Chart -->
+  <rect x="577.2" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="577.2" y="306.4" width="26" height="23.6" rx="3" fill="#334155"/>
+<text x="590.2" y="301.4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">8%</text>
+<text x="590.2" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">MON</text>
+<rect x="625.8" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="625.8" y="297.6" width="26" height="32.4" rx="3" fill="#334155"/>
+<text x="638.8" y="292.6" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">11%</text>
+<text x="638.8" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">TUE</text>
+<rect x="674.2" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="674.2" y="276.9" width="26" height="53.1" rx="3" fill="#334155"/>
+<text x="687.2" y="271.9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">18%</text>
+<text x="687.2" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">WED</text>
+<rect x="722.8" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="722.8" y="297.6" width="26" height="32.4" rx="3" fill="#334155"/>
+<text x="735.8" y="292.6" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">11%</text>
+<text x="735.8" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">THU</text>
+<rect x="771.2" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="771.2" y="276.9" width="26" height="53.1" rx="3" fill="#334155"/>
+<text x="784.2" y="271.9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">18%</text>
+<text x="784.2" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">FRI</text>
+<rect x="819.8" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="819.8" y="274.0" width="26" height="56.0" rx="3" fill="#38BDF8"/>
+<text x="832.8" y="269.0" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#38BDF8">19%</text>
+<text x="832.8" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">SAT</text>
+<rect x="868.2" y="274" width="26" height="56" rx="3" fill="#1E293B" fill-opacity="0.35"/>
+<rect x="868.2" y="288.7" width="26" height="41.3" rx="3" fill="#334155"/>
+<text x="881.2" y="283.7" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#F1F5F9">14%</text>
+<text x="881.2" y="344" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8">SUN</text>
+<line x1="566" y1="287.9" x2="900.5" y2="287.9" stroke="#34D399" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.8"/>
+<text x="903.5" y="290.9" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#34D399">AVG</text>
+
+</svg>

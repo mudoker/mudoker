@@ -6,7 +6,6 @@
   </defs>
 
   <rect width="878" height="118" x="1" y="1" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
-
   <text x="24" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#7C3AED" letter-spacing="1">REAL-TIME MULTIMODAL AUDIO PIPELINE</text>
   <text x="320" y="24" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#475569">// FULL-DUPLEX WEBSOCKET STREAMING &amp; STATE ENGINE</text>
 

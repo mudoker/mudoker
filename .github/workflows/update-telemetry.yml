@@ -1,0 +1,46 @@
+name: Update Realtime Profile Telemetry
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Live SVG Telemetry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/generate_v2.py
+
+      - name: Commit and Push Updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/ data/
+          if git diff --staged --quiet; then
+            echo "No telemetry changes detected."
+          else
+            git commit -m "chore: update realtime telemetry metrics [skip ci]"
+            git push
+          fi
