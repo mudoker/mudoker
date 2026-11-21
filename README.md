@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-banner-light.svg">
-  <img alt="Mudoker — Software &amp; Systems Engineer" src="assets/hero-banner-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/hero-banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/hero-banner-light.svg">
+  <img alt="Mudoker — Software &amp; Systems Engineer" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/hero-banner-dark.svg" width="100%">
 </picture>
 
 <br/>
@@ -39,9 +39,9 @@ I approach software engineering with a conviction that **understanding the layer
 ## ⚡ Core Engineering Dimensions
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/pillars-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/pillars-light.svg">
-  <img alt="Core Engineering Triad" src="assets/pillars-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pillars-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pillars-light.svg">
+  <img alt="Core Engineering Triad" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pillars-dark.svg" width="100%">
 </picture>
 
 <br/>
@@ -69,9 +69,9 @@ A curated showcase of recent engineering work spanning systems programming, term
 An open-source Linux userspace driver for the **Goodix TLS 52XD (`27c6:521d`)** fingerprint sensor (found across modern ASUS ROG Zephyrus, ZenBook, and Lenovo laptops). Solved chronic community false-acceptance and rejection issues by completely overhauling the raw capture and minutiae matching pipeline.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-libfprint-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/pipeline-libfprint-light.svg">
-  <img alt="libfprint signal pipeline" src="assets/pipeline-libfprint-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-light.svg">
+  <img alt="libfprint signal pipeline" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-dark.svg" width="100%">
 </picture>
 
 * **Root Cause Discovery**: Diagnosed static DC offsets caused by physical sensor die stuck pixels (`(46,64)`, `(42,69)`, `(40,64)`, etc.) that previously produced identical artificial constellations across unrelated fingers, leading to dangerous impostor unlocks.
@@ -116,9 +116,9 @@ A keyboard-centric terminal productivity engine built for developers who want de
 An interactive noir interrogation simulation where players face off against an aggressive AI detective. Explores real-time multimodal interaction through low-latency full-duplex voice streaming.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dodo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/pipeline-dodo-light.svg">
-  <img alt="dodo audio pipeline" src="assets/pipeline-dodo-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-dodo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-dodo-light.svg">
+  <img alt="dodo audio pipeline" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-dodo-dark.svg" width="100%">
 </picture>
 
 * **Full-Duplex Voice Streaming**: Connected to `gemini-2.0-flash-live-001` via direct bidirectional WebSockets (`wss://`), achieving natural conversational interruption and immediate audio synthesis.
@@ -168,9 +168,9 @@ Areas I am actively researching and building experiments around:
 ## 📊 Technical Signals & Overview
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics-light.svg">
-  <img alt="Technical Metrics and Language Breakdown" src="assets/metrics-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-light.svg">
+  <img alt="Technical Metrics and Language Breakdown" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-dark.svg" width="100%">
 </picture>
 
 ---
