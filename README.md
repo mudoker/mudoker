@@ -42,16 +42,6 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/code-2.svg" width="20" height="20" align="absmiddle" alt="Technology Stack" /> Technology Ecosystem
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/tech-stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/tech-stack-light.svg">
-  <img alt="Technology Stack" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/tech-stack-dark.svg" width="100%">
-</picture>
-
----
-
 ## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="20" height="20" align="absmiddle" alt="Contact" /> Contact
 
 <a href="https://github.com/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/github.svg" width="16" height="16" align="absmiddle" alt="GitHub" /> GitHub</a> &bull;

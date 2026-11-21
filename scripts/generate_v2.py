@@ -681,96 +681,95 @@ def generate_overview_activity(metrics, is_dark=True):
     '''
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 216" width="100%" height="100%">
+  <defs>
+    <radialGradient id="lens_glow_{'dark' if is_dark else 'light'}" cx="60%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="{accent_blue}" stop-opacity="{'0.75' if is_dark else '0.45'}"/>
+      <stop offset="45%" stop-color="{accent_blue}" stop-opacity="{'0.3' if is_dark else '0.15'}"/>
+      <stop offset="100%" stop-color="{accent_blue}" stop-opacity="0.0"/>
+    </radialGradient>
+    <clipPath id="lens_clip_{'dark' if is_dark else 'light'}">
+      <circle cx="76" cy="90" r="32"/>
+    </clipPath>
+  </defs>
+
   <rect width="958" height="214" x="1" y="1" rx="14" fill="{bg_color}" stroke="{border_color}" stroke-width="1.2"/>
 
   <!-- Top Title -->
-  <text x="24" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="{accent_blue}" letter-spacing="1">SYSTEM ARCHITECTURES &amp; SCOPE</text>
-  <text x="250" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="{text_secondary}">// ACTIVE PIPELINES &amp; PRODUCTION ALLOCATION</text>
+  <text x="24" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="{accent_blue}" letter-spacing="1">ENGINEERING DOMAINS &amp; SCOPE</text>
+  <text x="250" y="25" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="{text_secondary}">// CORE PRINCIPLES &amp; PRODUCTION ALLOCATION</text>
 
-  <!-- Left: Active Systems Development Pipeline (Visuals & Stage Flow // NO Description Text) -->
+  <!-- Left: Engineering Principles & Domains (Geometric Synthesis Inspired by Design Reference) -->
   <g transform="translate(24, 42)">
     <rect width="450" height="152" rx="8" fill="{card_bg}" stroke="{card_border}" stroke-width="1"/>
     
-    <text x="18" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" fill="{text_primary}">Active Systems Pipeline</text>
-    <text x="18" y="34" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_secondary}">CORE ARCHITECTURES &amp; STAGE FLOW</text>
+    <!-- Header -->
+    <text x="18" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" fill="{text_primary}">Engineering Principles &amp; Domains</text>
+    <text x="18" y="34" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_secondary}">CONVERGENT ARCHITECTURES // CORE SPECIALIZATIONS</text>
 
     <!-- Top-Right Status -->
-    <g transform="translate(296, 12)">
-      <rect width="136" height="18" rx="3.5" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
-      <circle cx="10" cy="9" r="2.5" fill="{accent_emerald}"/>
-      <text x="18" y="12.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="{text_primary}">3 ACTIVE PIPELINES</text>
+    <g transform="translate(304, 12)">
+      <rect width="128" height="18" rx="3.5" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
+      <circle cx="10" cy="9" r="2.5" fill="{accent_blue}"/>
+      <text x="18" y="12.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="{text_primary}">3 CORE PRINCIPLES</text>
     </g>
 
-    <!-- Row 1: libfprint-521d -->
-    <g transform="translate(18, 44)">
-      <rect width="88" height="26" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
-      <circle cx="10" cy="13" r="2.5" fill="{accent_blue}"/>
-      <text x="18" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="{text_primary}">libfprint</text>
-      <text x="80" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">C</text>
+    <!-- LEFT: Geometric Overlapping Lens / Synthesis Geometry (Inspired by Reference) -->
+    <g transform="translate(0, 0)">
+      <!-- Crosshairs & Grid Guideliness -->
+      <line x1="20" y1="90" x2="136" y2="90" stroke="{text_muted}" stroke-width="0.6" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+      <line x1="76" y1="44" x2="76" y2="136" stroke="{text_muted}" stroke-width="0.6" stroke-dasharray="3 3" stroke-opacity="0.35"/>
 
-      <rect x="94" y="2" width="84" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="136" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Raw Sensor</text>
+      <!-- Overlapping Circles (Radius 26) -->
+      <!-- Systems Circle (Top-Left) -->
+      <circle cx="65" cy="78" r="26" fill="none" stroke="{accent_blue}" stroke-width="0.9" stroke-opacity="0.45"/>
+      
+      <!-- Architecture Circle (Top-Right) -->
+      <circle cx="87" cy="78" r="26" fill="none" stroke="{accent_emerald}" stroke-width="0.9" stroke-opacity="0.45"/>
+      
+      <!-- AI Circle (Bottom) with Glowing Lens Fill -->
+      <circle cx="76" cy="100" r="26" fill="none" stroke="{accent_purple}" stroke-width="0.9" stroke-opacity="0.45"/>
 
-      <text x="184" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
+      <!-- Ethereal Glowing Lens on Right Half -->
+      <g clip-path="url(#lens_clip_{'dark' if is_dark else 'light'})">
+        <ellipse cx="76" cy="90" rx="22" ry="32" fill="url(#lens_glow_{'dark' if is_dark else 'light'})"/>
+      </g>
 
-      <rect x="190" y="2" width="88" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="234" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">ADC Noise</text>
+      <!-- Center Convergence Core Dot -->
+      <circle cx="76" cy="85" r="3" fill="{text_primary}"/>
+      <circle cx="76" cy="85" r="6" fill="none" stroke="{accent_blue}" stroke-width="0.8" stroke-opacity="0.8"/>
 
-      <text x="284" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
-
-      <rect x="290" y="2" width="74" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="327" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Bozorth-3</text>
-
-      <rect x="370" y="2" width="44" height="22" rx="3" fill="rgba(52, 211, 153, 0.12)" stroke="{accent_emerald}" stroke-width="0.8"/>
-      <text x="392" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="{accent_emerald}">0% FAR</text>
+      <!-- Domain Tiny Pips -->
+      <text x="50" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="600" fill="{accent_blue}">SYS</text>
+      <text x="102" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="600" fill="{accent_emerald}">ARCH</text>
+      <text x="76" y="130" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="600" fill="{accent_purple}">AI</text>
     </g>
 
-    <!-- Row 2: stream -->
-    <g transform="translate(18, 77)">
-      <rect width="88" height="26" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
-      <circle cx="10" cy="13" r="2.5" fill="{accent_emerald}"/>
-      <text x="18" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="{text_primary}">stream</text>
-      <text x="80" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Go</text>
-
-      <rect x="94" y="2" width="84" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="136" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Vim Modal</text>
-
-      <text x="184" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
-
-      <rect x="190" y="2" width="88" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="234" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Bubble Tea</text>
-
-      <text x="284" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
-
-      <rect x="290" y="2" width="74" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="327" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">WAL Sync</text>
-
-      <rect x="370" y="2" width="44" height="22" rx="3" fill="rgba(56, 189, 248, 0.12)" stroke="{accent_blue}" stroke-width="0.8"/>
-      <text x="392" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="{accent_blue}">60 FPS</text>
+    <!-- RIGHT: 3 Domain Cards -->
+    <!-- 01 Systems -->
+    <g transform="translate(144, 44)">
+      <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
+      <circle cx="12" cy="14" r="3" fill="{accent_blue}"/>
+      <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Systems Engineering</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Linux Kernel &#8226; C / Go &#8226; Drivers &#8226; 0.0% FAR Biometrics</text>
+      <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_blue}">01</text>
     </g>
 
-    <!-- Row 3: dodo -->
-    <g transform="translate(18, 110)">
-      <rect width="88" height="26" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
-      <circle cx="10" cy="13" r="2.5" fill="{accent_purple}"/>
-      <text x="18" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="{text_primary}">dodo</text>
-      <text x="80" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">TS</text>
+    <!-- 02 Architecture -->
+    <g transform="translate(144, 77)">
+      <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
+      <circle cx="12" cy="14" r="3" fill="{accent_emerald}"/>
+      <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Software Architecture</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">High-Throughput Backends &#8226; TUI Runtimes &#8226; WAL Sync</text>
+      <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_emerald}">02</text>
+    </g>
 
-      <rect x="94" y="2" width="84" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="136" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Audio Work</text>
-
-      <text x="184" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
-
-      <rect x="190" y="2" width="88" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="234" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">WebSocket</text>
-
-      <text x="284" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" fill="{text_muted}">→</text>
-
-      <rect x="290" y="2" width="74" height="22" rx="3" fill="{node_bg}" stroke="{node_border}" stroke-width="0.8"/>
-      <text x="327" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="{text_secondary}">Gemini Live</text>
-
-      <rect x="370" y="2" width="44" height="22" rx="3" fill="rgba(167, 139, 250, 0.12)" stroke="{accent_purple}" stroke-width="0.8"/>
-      <text x="392" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="{accent_purple}">&lt;100ms</text>
+    <!-- 03 Applied AI -->
+    <g transform="translate(144, 110)">
+      <rect width="288" height="28" rx="4" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1"/>
+      <circle cx="12" cy="14" r="3" fill="{accent_purple}"/>
+      <text x="22" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9" font-weight="700" fill="{text_primary}">Applied Intelligence</text>
+      <text x="22" y="23" font-family="'JetBrains Mono', monospace" font-size="7" fill="{text_secondary}">Gemini Multimodal Live &#8226; Audio Worklet DSP &#8226; WebSockets</text>
+      <text x="278" y="18" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="{accent_purple}">03</text>
     </g>
   </g>
 
