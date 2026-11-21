@@ -13,16 +13,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/github.svg" width="16" height="16" align="center" alt="GitHub" /> GitHub</a> &bull;
-  <a href="https://linkedin.com/in/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/linkedin.svg" width="16" height="16" align="center" alt="LinkedIn" /> LinkedIn</a> &bull;
-  <a href="mailto:huuquoc7603@gmail.com"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="16" height="16" align="center" alt="Email" /> Email</a>
+  <a href="https://github.com/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/github.svg" width="16" height="16" align="absmiddle" alt="GitHub" /> GitHub</a> &bull;
+  <a href="https://linkedin.com/in/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/linkedin.svg" width="16" height="16" align="absmiddle" alt="LinkedIn" /> LinkedIn</a> &bull;
+  <a href="mailto:huuquoc7603@gmail.com"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="16" height="16" align="absmiddle" alt="Email" /> Email</a>
 </p>
 
 ---
 
 </div>
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/layers.svg" width="20" height="20" align="center" alt="Engineering Focus" /> Engineering Focus
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/activity.svg" width="20" height="20" align="absmiddle" alt="Activity &amp; Overview" /> Activity &amp; Overview
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/overview-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/overview-activity-light.svg">
+  <img alt="Activity and Overview" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/overview-activity-dark.svg" width="100%">
+</picture>
+
+---
+
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/layers.svg" width="20" height="20" align="absmiddle" alt="Engineering Focus" /> Engineering Focus
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/engineering-focus-dark.svg">
@@ -32,42 +42,19 @@
 
 ---
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/folder-code.svg" width="20" height="20" align="center" alt="Selected Projects" /> Selected Projects
-
-Curated systems, developer tooling, applied intelligence, and algorithmic platforms.
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/folder-code.svg" width="20" height="20" align="absmiddle" alt="Selected Projects" /> Selected Projects
 
 <br/>
-
-### [`libfprint-goodix-521d`](https://github.com/mudoker/libfprint-goodix-521d) &mdash; Hardened Linux Biometric Driver
-
-Open-source Linux driver for Goodix 52XD biometric sensors. Eliminates impostor unlocks and false rejections through hardware bad-pixel correction and minutiae filtering.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-light.svg">
-  <img alt="libfprint signal pipeline" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/pipeline-libfprint-dark.svg" width="100%">
-</picture>
-
-- Achieved 0.0% False Accept Rate (FAR) by interpolating static DC defect offsets in raw sensor space.
-- Implemented 5-frame temporal ADC noise averaging and 2&times;2 bilinear upscaling for NIST NBIS `mindtct`.
-
-`C` &bull; `Linux libfprint` &bull; `GLib` &bull; `Meson` &bull; `NIST NBIS` &bull; [View Repository &rarr;](https://github.com/mudoker/libfprint-goodix-521d)
-
----
 
 ### [`stream`](https://github.com/mudoker/stream) &mdash; Vim-First Terminal Calendar &amp; Agile Engine
 
 High-performance, Vim-first terminal calendar and agile sprint execution engine built in Go. Bridges deep time-blocking and backlog triage with zero mouse latency.
 
-```text
-┌────────────────────────────────── STREAM TUI ENGINE ──────────────────────────────────┐
-│ [1] Dashboard    [2] Month Grid    [3] Sprint Kanban    [4] Week Matrix    [5] Timeline │
-│  BACKLOG (Vim motions)        │ IN PROGRESS                   │ DONE                  │
-│  ├─ [CORE] SQLite WAL Engine  │ ├─ [TUI] Viewport refactor    │ ├─ [VIM] Motions OK   │
-│  └─ [AUTH] Google OAuth2      │ └─ [API] Bi-directional sync  │ └─ [LOG] Audit trail  │
-│  :help  :sync  :view <kanban>                         [Mem: <15MB]  [Latency: <1ms]   │
-└───────────────────────────────────────────────────────────────────────────────────────┘
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/stream-arch-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/stream-arch-light.svg">
+  <img alt="stream sync architecture" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/stream-arch-dark.svg" width="100%">
+</picture>
 
 - 6 cohesive perspective views rendered at 60fps with pure home-row Vim modal navigation.
 - Offline-first JSON ledger with optimistic local writes and bi-directional Google Calendar sync.
@@ -104,7 +91,7 @@ Smart multi-currency group expense ledger. Employs graph-based debt minimization
 
 ---
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/code-2.svg" width="20" height="20" align="center" alt="Technology Stack" /> Technology Ecosystem
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/code-2.svg" width="20" height="20" align="absmiddle" alt="Technology Stack" /> Technology Ecosystem
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/tech-stack-dark.svg">
@@ -114,7 +101,7 @@ Smart multi-currency group expense ledger. Employs graph-based debt minimization
 
 ---
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/compass.svg" width="20" height="20" align="center" alt="Technical Interests" /> Technical Interests
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/compass.svg" width="20" height="20" align="absmiddle" alt="Technical Interests" /> Technical Interests
 
 <code>Efficient AI Inference</code> &bull;
 <code>Linux &amp; Systems Programming</code> &bull;
@@ -124,18 +111,8 @@ Smart multi-currency group expense ledger. Employs graph-based debt minimization
 
 ---
 
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/activity.svg" width="20" height="20" align="center" alt="Technical Signals" /> Activity &amp; Overview
+## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="20" height="20" align="absmiddle" alt="Contact" /> Contact
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-light.svg">
-  <img alt="Activity and Overview" src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/metrics-dark.svg" width="100%">
-</picture>
-
----
-
-## <img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="20" height="20" align="center" alt="Contact" /> Contact
-
-<a href="https://github.com/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/github.svg" width="16" height="16" align="center" alt="GitHub" /> GitHub</a> &bull;
-<a href="https://linkedin.com/in/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/linkedin.svg" width="16" height="16" align="center" alt="LinkedIn" /> LinkedIn</a> &bull;
-<a href="mailto:huuquoc7603@gmail.com"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="16" height="16" align="center" alt="Email" /> huuquoc7603@gmail.com</a>
+<a href="https://github.com/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/github.svg" width="16" height="16" align="absmiddle" alt="GitHub" /> GitHub</a> &bull;
+<a href="https://linkedin.com/in/mudoker"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/linkedin.svg" width="16" height="16" align="absmiddle" alt="LinkedIn" /> LinkedIn</a> &bull;
+<a href="mailto:huuquoc7603@gmail.com"><img src="https://raw.githubusercontent.com/mudoker/mudoker/main/assets/icons/mail.svg" width="16" height="16" align="absmiddle" alt="Email" /> huuquoc7603@gmail.com</a>

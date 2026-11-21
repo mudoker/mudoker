@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 210" width="100%" height="100%">
+  <rect width="958" height="208" x="1" y="1" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <g transform="translate(32, 28)">
+    <text x="0" y="0" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#0284C7" letter-spacing="1.5">ACTIVITY &amp; TECHNICAL OVERVIEW</text>
+    <text x="240" y="0" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" fill="#64748B">// 14-DAY COMMIT VELOCITY &amp; LANGUAGE DISTRIBUTION</text>
+  </g>
+
+  <!-- Left: Daily Commit Rate Chart (Width: 500) -->
+  <g transform="translate(32, 46)">
+    <rect width="500" height="138" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    
+    <!-- Chart Title and Metrics -->
+    <text x="18" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#0F172A">Daily Commit Frequency</text>
+    
+    <g transform="translate(310, 24)">
+      <rect x="0" y="-12" width="80" height="20" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <circle cx="8" cy="-2" r="2.5" fill="#059669"/>
+      <text x="16" y="2" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#059669">6.9 / DAY</text>
+      
+      <rect x="88" y="-12" width="84" height="20" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="96" y="2" font-family="'JetBrains Mono', monospace" font-size="9" fill="#475569">96% CONSISTENT</text>
+    </g>
+
+    <!-- Grid lines -->
+    <line x1="20" y1="52" x2="480" y2="52" stroke="#CBD5E1" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <line x1="20" y1="84" x2="480" y2="84" stroke="#CBD5E1" stroke-width="0.8" stroke-dasharray="2 3"/>
+    <line x1="20" y1="116" x2="480" y2="116" stroke="#CBD5E1" stroke-width="1"/>
+
+    <!-- Daily Bars -->
+
+    <rect x="28" y="99" width="20" height="17" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="60" y="91" width="20" height="25" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="92" y="104" width="20" height="12" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="124" y="82" width="20" height="34" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="156" y="95" width="20" height="21" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="188" y="86" width="20" height="30" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="220" y="78" width="20" height="38" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="252" y="99" width="20" height="17" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="284" y="69" width="20" height="47" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="316" y="91" width="20" height="25" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="348" y="82" width="20" height="34" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="380" y="65" width="20" height="51" rx="3" fill="#0284C7" fill-opacity="0.85"/>
+
+    <rect x="412" y="86" width="20" height="30" rx="3" fill="#059669" fill-opacity="0.85"/>
+
+    <rect x="444" y="78" width="20" height="38" rx="3" fill="#059669" fill-opacity="0.85"/>
+
+    <text x="32" y="128" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">14d ago</text>
+    <text x="248" y="128" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748B">7d ago</text>
+    <text x="472" y="128" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#059669">Today (Active)</text>
+  </g>
+
+  <!-- Right: Clean Language Distribution & Architecture Chips (Width: 380) -->
+  <g transform="translate(548, 46)">
+    <rect width="380" height="138" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+    
+    <text x="18" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#0F172A">Language Ecosystem</text>
+
+    <!-- Stacked Distribution Bar (344px wide) -->
+    <g transform="translate(18, 38)">
+      <rect x="0" y="0" width="344" height="10" rx="4" fill="#334155"/>
+      <rect x="0" y="0" width="168" height="10" rx="4" fill="#0284C7"/>
+      <rect x="170" y="0" width="115" height="10" rx="0" fill="#7C3AED"/>
+      <rect x="287" y="0" width="38" height="10" rx="0" fill="#059669"/>
+      <rect x="327" y="0" width="17" height="10" rx="0" fill="#D97706"/>
+    </g>
+
+    <!-- Spacious 2x2 Language Legend (Clean, zero overlap) -->
+    <g transform="translate(18, 68)">
+      <!-- Go -->
+      <circle cx="4" cy="4" r="3.5" fill="#0284C7"/>
+      <text x="14" y="8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#0F172A">Go</text>
+      <text x="40" y="8" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#475569">48% (stream)</text>
+
+      <!-- TypeScript -->
+      <circle cx="178" cy="4" r="3.5" fill="#7C3AED"/>
+      <text x="188" y="8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#0F172A">TypeScript</text>
+      <text x="265" y="8" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#475569">34% (dodo, ledger)</text>
+
+      <!-- Python -->
+      <circle cx="4" cy="24" r="3.5" fill="#059669"/>
+      <text x="14" y="28" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#0F172A">Python</text>
+      <text x="60" y="28" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#475569">11% (tooling)</text>
+
+      <!-- SQL / SQLite -->
+      <circle cx="178" cy="24" r="3.5" fill="#D97706"/>
+      <text x="188" y="28" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#0F172A">SQL</text>
+      <text x="215" y="28" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#475569">7% (db schemas)</text>
+    </g>
+
+    <!-- Architecture Tenet Chips -->
+    <g transform="translate(18, 108)">
+      <rect x="0" y="0" width="105" height="20" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="52" y="13" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#0284C7">VIM MODAL TUI</text>
+
+      <rect x="113" y="0" width="112" height="20" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="169" y="13" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#7C3AED">LIVE WEBSOCKETS</text>
+
+      <rect x="233" y="0" width="111" height="20" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="288" y="13" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#059669">OFFLINE-FIRST</text>
+    </g>
+  </g>
+</svg>

@@ -11,36 +11,34 @@
   <g transform="translate(24, 46)">
     <rect width="400" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
     
-    <!-- Language Bar -->
     <g transform="translate(16, 18)">
       <rect x="0" y="0" width="368" height="10" rx="4" fill="#334155"/>
-      <rect x="0" y="0" width="130" height="10" rx="4" fill="#0284C7"/>
-      <rect x="132" y="0" width="115" height="10" rx="0" fill="#7C3AED"/>
-      <rect x="249" y="0" width="65" height="10" rx="0" fill="#D97706"/>
-      <rect x="316" y="0" width="40" height="10" rx="0" fill="#059669"/>
+      <rect x="0" y="0" width="180" height="10" rx="4" fill="#0284C7"/>
+      <rect x="182" y="0" width="120" height="10" rx="0" fill="#7C3AED"/>
+      <rect x="304" y="0" width="40" height="10" rx="0" fill="#D97706"/>
+      <rect x="346" y="0" width="22" height="10" rx="0" fill="#059669"/>
     </g>
 
-    <!-- Language Labels -->
     <g transform="translate(16, 48)">
       <!-- Go -->
       <circle cx="4" cy="4" r="4" fill="#0284C7"/>
       <text x="14" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">Go</text>
-      <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">35% (stream, memoir)</text>
+      <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">48% (stream, memoir)</text>
 
       <!-- TypeScript -->
-      <circle cx="104" cy="4" r="4" fill="#7C3AED"/>
-      <text x="114" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">TypeScript</text>
-      <text x="114" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">31% (ledger, dodo)</text>
+      <circle cx="124" cy="4" r="4" fill="#7C3AED"/>
+      <text x="134" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">TypeScript</text>
+      <text x="134" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">33% (ledger, dodo)</text>
 
-      <!-- C / Linux -->
-      <circle cx="214" cy="4" r="4" fill="#D97706"/>
-      <text x="224" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">C / Linux</text>
-      <text x="224" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">18% (libfprint-521d)</text>
+      <!-- Python / Shell -->
+      <circle cx="244" cy="4" r="4" fill="#D97706"/>
+      <text x="254" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">Python/Shell</text>
+      <text x="254" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">11% (tooling, daemons)</text>
 
-      <!-- Python / SQL -->
-      <circle cx="314" cy="4" r="4" fill="#059669"/>
-      <text x="324" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">Python/SQL</text>
-      <text x="324" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">16% (infra, scripts)</text>
+      <!-- SQL / Data -->
+      <circle cx="344" cy="4" r="4" fill="#059669"/>
+      <text x="354" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">SQL</text>
+      <text x="354" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">8% (db schemas)</text>
     </g>
   </g>
 
@@ -52,10 +50,10 @@
       <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#0F172A">Engineering Tenets</text>
       
       <g transform="translate(0, 16)">
-        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Zero-tolerance for False Accepts in Biometrics (0.0% FAR verified)</text>
-        <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Pure home-row keyboard ergonomics with Vim-style modal states</text>
-        <text x="0" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Sub-100ms real-time multimodal audio streaming over WebSockets</text>
-        <text x="0" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Offline-first local data structures with optimistic synchronization</text>
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">&#8226; Pure home-row keyboard ergonomics with Vim-style modal states</text>
+        <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">&#8226; Sub-100ms real-time multimodal audio streaming over WebSockets</text>
+        <text x="0" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">&#8226; Offline-first local data structures with optimistic synchronization</text>
+        <text x="0" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">&#8226; Algorithmic N-party debt graph minimization and cash flow resolution</text>
       </g>
     </g>
   </g>

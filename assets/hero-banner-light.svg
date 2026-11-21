@@ -4,95 +4,186 @@
       <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#E2E8F0" stroke-width="0.75" stroke-opacity="0.6"/>
       <circle cx="32" cy="32" r="1" fill="#E2E8F0" fill-opacity="0.8"/>
     </pattern>
-    <linearGradient id="blue_glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.15"/>
+    <radialGradient id="globe_glow_light" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.18"/>
+      <stop offset="65%" stop-color="#0284C7" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="subtle_shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
-    </filter>
+    </radialGradient>
+    <radialGradient id="sphere_shading_light" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#CBD5E1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#94A3B8" stop-opacity="0.38"/>
+    </radialGradient>
+    <clipPath id="globe_mask_light">
+      <circle cx="785" cy="145" r="78"/>
+    </clipPath>
   </defs>
 
   <!-- Background Canvas -->
-  <rect width="958" height="318" x="1" y="1" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" filter="url(#subtle_shadow)"/>
-  <rect width="956" height="316" x="2" y="2" rx="13" fill="url(#grid_light)" />
-
-  <!-- Ambient Glow -->
-  <circle cx="820" cy="90" r="160" fill="url(#blue_glow)" />
+  <rect width="958" height="318" x="1" y="1" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect width="956" height="316" x="2" y="2" rx="13" fill="url(#grid_light)"/>
 
   <!-- Top System Bar -->
   <g transform="translate(36, 36)">
-    <!-- Terminal indicator / status -->
-    <circle cx="4" cy="4" r="4.5" fill="#059669" />
+    <circle cx="4" cy="4" r="4.5" fill="#059669"/>
     <circle cx="4" cy="4" r="9" fill="none" stroke="#059669" stroke-width="1" stroke-opacity="0.4">
       <animate attributeName="r" values="4.5;10;4.5" dur="3s" repeatCount="indefinite"/>
       <animate attributeName="stroke-opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
     </circle>
-    <text x="24" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', Roboto, monospace" font-size="11" font-weight="600" fill="#059669" letter-spacing="1.5">SYSTEM ACTIVE // ARCHITECTURE • SYSTEMS • AI</text>
-    
-    <text x="888" y="8" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748B" letter-spacing="1">10.82°N, 106.63°E</text>
+    <text x="24" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#059669" letter-spacing="1.5">SYSTEM ACTIVE // SYSTEMS &#8226; ARCHITECTURE &#8226; AI</text>
   </g>
 
   <!-- Top Divider Line -->
-  <line x1="36" y1="58" x2="924" y2="58" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4" />
+  <line x1="36" y1="58" x2="924" y2="58" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4"/>
 
-  <!-- Main Hero Brand Section -->
+  <!-- Left Main Hero Brand Section (Safe width: 560px, never touches globe) -->
   <g transform="translate(36, 120)">
-    <!-- Monospace Prompt Prefix -->
-    <text x="0" y="-8" font-family="'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="500" fill="#0284C7" letter-spacing="0.5">&gt; whoami --verbose</text>
-    
-    <!-- User / Profile Name -->
+    <text x="0" y="-8" font-family="'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="500" fill="#0284C7" letter-spacing="0.5">&gt; whoami --portfolio</text>
     <text x="0" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="46" font-weight="800" fill="#0F172A" letter-spacing="-1">mudoker</text>
     <text x="220" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="400" fill="#64748B">/</text>
     <text x="238" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="500" fill="#475569">software &amp; systems engineer</text>
 
-    <!-- Bio / Philosophy snippet -->
-    <text x="0" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="14.5" font-weight="400" fill="#475569" letter-spacing="-0.1">
-      Designing resilient backend architectures, hardware-adjacent Linux systems, and real-time intelligent agents.
-    </text>
-    <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-style="italic" fill="#64748B">
-      &#8220;If a thing is humanly possible, consider it to be within your reach.&#8221; &#8212; Marcus Aurelius
+    <!-- One-line concise tagline -->
+    <text x="0" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="14.5" font-weight="400" fill="#475569">
+      Engineering resilient backends, keyboard-first terminal engines, and practical multimodal AI.
     </text>
   </g>
 
-  <!-- Right Geometric Radar & Specs Graphic -->
-  <g transform="translate(730, 95)">
-    <!-- Circuit Crosshairs & Coordinates -->
-    <circle cx="100" cy="70" r="60" fill="none" stroke="#E2E8F0" stroke-width="1.2" />
-    <circle cx="100" cy="70" r="40" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3" />
-    <circle cx="100" cy="70" r="20" fill="none" stroke="#E2E8F0" stroke-width="0.8" />
-    <circle cx="100" cy="70" r="3" fill="#0284C7" />
-    
-    <!-- Target Crosshairs -->
-    <line x1="25" y1="70" x2="175" y2="70" stroke="#E2E8F0" stroke-width="0.8" />
-    <line x1="100" y1="-5" x2="100" y2="145" stroke="#E2E8F0" stroke-width="0.8" />
-    
-    <!-- Coordinate ticks -->
-    <path d="M 92 10 L 100 10 M 108 10 L 100 10 M 92 130 L 100 130 M 108 130 L 100 130" stroke="#0284C7" stroke-width="1" />
-    <path d="M 40 62 L 40 70 M 40 78 L 40 70 M 160 62 L 160 70 M 160 78 L 160 70" stroke="#0284C7" stroke-width="1" />
+  <!-- ================= RIGHT: ROTATING 3D WIREFRAME GLOBE ================= -->
+  <!-- Ambient Atmospheric Glow -->
+  <circle cx="785" cy="145" r="110" fill="url(#globe_glow_light)"/>
 
-    <!-- Technical Labels -->
-    <text x="100" y="156" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0284C7" letter-spacing="1">SYS_KERNEL_OK</text>
+  <!-- Orbital Track Ring -->
+  <ellipse cx="785" cy="145" rx="104" ry="34" fill="none" stroke="#0284C7" stroke-width="1" stroke-opacity="0.32" stroke-dasharray="4 6" transform="rotate(-20 785 145)"/>
+
+  <!-- Globe Sphere Solid Base -->
+  <circle cx="785" cy="145" r="78" fill="#F1F5F9" stroke="#0284C7" stroke-width="1.5" stroke-opacity="0.85"/>
+
+  <!-- Clipped Rotating Wireframe -->
+  <g clip-path="url(#globe_mask_light)">
+    <g transform="rotate(-15 785 145)">
+      <!-- Latitudes -->
+      <ellipse cx="785" cy="145" rx="78" ry="0" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-opacity="0.7"/>
+      <ellipse cx="785" cy="119" rx="73" ry="19" fill="none" stroke="#E2E8F0" stroke-width="0.9" stroke-opacity="0.6"/>
+      <ellipse cx="785" cy="171" rx="73" ry="19" fill="none" stroke="#E2E8F0" stroke-width="0.9" stroke-opacity="0.6"/>
+      <ellipse cx="785" cy="93" rx="58" ry="14" fill="none" stroke="#E2E8F0" stroke-width="0.8" stroke-opacity="0.5"/>
+      <ellipse cx="785" cy="197" rx="58" ry="14" fill="none" stroke="#E2E8F0" stroke-width="0.8" stroke-opacity="0.5"/>
+
+      <!-- Rotating Longitude Meridians (Infinite translation period of 152px) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="152,0" dur="10s" repeatCount="indefinite"/>
+        <path d="M 465 67 Q 489 145 465 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 503 67 Q 527 145 503 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 541 67 Q 565 145 541 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 579 67 Q 603 145 579 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 617 67 Q 641 145 617 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 655 67 Q 679 145 655 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 693 67 Q 717 145 693 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 731 67 Q 755 145 731 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 769 67 Q 793 145 769 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 807 67 Q 831 145 807 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 845 67 Q 869 145 845 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 883 67 Q 907 145 883 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 921 67 Q 945 145 921 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 959 67 Q 983 145 959 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 997 67 Q 1021 145 997 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 1035 67 Q 1059 145 1035 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+<path d="M 1073 67 Q 1097 145 1073 223" fill="none" stroke="#0284C7" stroke-width="1.1" stroke-opacity="0.45"/>
+
+        <circle cx="545" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="559" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="565" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="553" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="577" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="591" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="597" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="585" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="609" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="623" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="629" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="617" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="641" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="655" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="661" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="649" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="673" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="687" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="693" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="681" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="705" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="719" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="725" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="713" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="737" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="751" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="757" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="745" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="769" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="783" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="789" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="777" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="801" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="815" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="821" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="809" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="833" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="847" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="853" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="841" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="865" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="879" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="885" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="873" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="897" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="911" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="917" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="905" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="929" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="943" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="949" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="937" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="961" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="975" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="981" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="969" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="993" cy="130" r="1.8" fill="#0284C7" fill-opacity="0.75"/>
+<circle cx="1007" cy="160" r="1.8" fill="#0284C7" fill-opacity="0.7"/>
+<circle cx="1013" cy="107" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+<circle cx="1001" cy="183" r="1.5" fill="#0284C7" fill-opacity="0.55"/>
+
+      </g>
+    </g>
+
+    <!-- 3D Depth Shading Overlay -->
+    <circle cx="785" cy="145" r="78" fill="url(#sphere_shading_light)"/>
   </g>
 
-  <!-- Bottom Badges / Capabilities Bar -->
+  <!-- Beacon Target Pin: Ho Chi Minh City [10.82°N, 106.63°E] -->
+  <g transform="translate(800, 134)">
+    <circle cx="0" cy="0" r="3.5" fill="#0284C7"/>
+    <circle cx="0" cy="0" r="7" fill="none" stroke="#0284C7" stroke-width="1.2">
+      <animate attributeName="r" values="3.5;13;3.5" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.9;0.1;0.9" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Location Label under Globe -->
+  <text x="785" y="247" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#0284C7" letter-spacing="1">10.82&#176;N, 106.63&#176;E &#8226; VN</text>
+
+  <!-- Bottom Fast Tags Bar -->
   <g transform="translate(36, 268)">
-    <!-- Pillar 1: Systems -->
-    <rect x="0" y="0" width="170" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <rect x="0" y="0" width="130" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
     <circle cx="14" cy="14" r="3" fill="#0284C7"/>
-    <text x="26" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">SYSTEMS &amp; DRIVERS</text>
+    <text x="26" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">GO &amp; TUI</text>
 
-    <!-- Pillar 2: Software Engineering -->
-    <rect x="182" y="0" width="180" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
-    <circle cx="196" cy="14" r="3" fill="#059669"/>
-    <text x="208" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">BACKEND ARCHITECTURE</text>
+    <rect x="142" y="0" width="170" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="156" cy="14" r="3" fill="#059669"/>
+    <text x="168" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">BACKEND SYSTEMS</text>
 
-    <!-- Pillar 3: Applied AI -->
-    <rect x="374" y="0" width="176" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
-    <circle cx="388" cy="14" r="3" fill="#7C3AED"/>
-    <text x="400" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">MULTIMODAL STREAMING</text>
+    <rect x="324" y="0" width="160" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="338" cy="14" r="3" fill="#A78BFA"/>
+    <text x="350" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">APPLIED AI LIVE</text>
 
-    <!-- Core Languages Snippet -->
-    <text x="888" y="18" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748B">[ Go • C • TypeScript • Linux • Python ]</text>
+    <text x="670" y="18" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748B">[ Go &#8226; TypeScript &#8226; Python &#8226; Linux &#8226; SQLite ]</text>
   </g>
 </svg>
