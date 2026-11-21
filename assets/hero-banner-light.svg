@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="100%" height="100%">
+  <defs>
+    <pattern id="grid_light" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#E2E8F0" stroke-width="0.75" stroke-opacity="0.6"/>
+      <circle cx="32" cy="32" r="1" fill="#E2E8F0" fill-opacity="0.8"/>
+    </pattern>
+    <linearGradient id="blue_glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="subtle_shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="958" height="318" x="1" y="1" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" filter="url(#subtle_shadow)"/>
+  <rect width="956" height="316" x="2" y="2" rx="13" fill="url(#grid_light)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="820" cy="90" r="160" fill="url(#blue_glow)" />
+
+  <!-- Top System Bar -->
+  <g transform="translate(36, 36)">
+    <!-- Terminal indicator / status -->
+    <circle cx="4" cy="4" r="4.5" fill="#059669" />
+    <circle cx="4" cy="4" r="9" fill="none" stroke="#059669" stroke-width="1" stroke-opacity="0.4">
+      <animate attributeName="r" values="4.5;10;4.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="24" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', Roboto, monospace" font-size="11" font-weight="600" fill="#059669" letter-spacing="1.5">SYSTEM ACTIVE // ARCHITECTURE • SYSTEMS • AI</text>
+    
+    <text x="888" y="8" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748B" letter-spacing="1">10.82°N, 106.63°E</text>
+  </g>
+
+  <!-- Top Divider Line -->
+  <line x1="36" y1="58" x2="924" y2="58" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Main Hero Brand Section -->
+  <g transform="translate(36, 120)">
+    <!-- Monospace Prompt Prefix -->
+    <text x="0" y="-8" font-family="'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="500" fill="#0284C7" letter-spacing="0.5">&gt; whoami --verbose</text>
+    
+    <!-- User / Profile Name -->
+    <text x="0" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="46" font-weight="800" fill="#0F172A" letter-spacing="-1">mudoker</text>
+    <text x="220" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="400" fill="#64748B">/</text>
+    <text x="238" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="20" font-weight="500" fill="#475569">software &amp; systems engineer</text>
+
+    <!-- Bio / Philosophy snippet -->
+    <text x="0" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="14.5" font-weight="400" fill="#475569" letter-spacing="-0.1">
+      Designing resilient backend architectures, hardware-adjacent Linux systems, and real-time intelligent agents.
+    </text>
+    <text x="0" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-style="italic" fill="#64748B">
+      &#8220;If a thing is humanly possible, consider it to be within your reach.&#8221; &#8212; Marcus Aurelius
+    </text>
+  </g>
+
+  <!-- Right Geometric Radar & Specs Graphic -->
+  <g transform="translate(730, 95)">
+    <!-- Circuit Crosshairs & Coordinates -->
+    <circle cx="100" cy="70" r="60" fill="none" stroke="#E2E8F0" stroke-width="1.2" />
+    <circle cx="100" cy="70" r="40" fill="none" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="100" cy="70" r="20" fill="none" stroke="#E2E8F0" stroke-width="0.8" />
+    <circle cx="100" cy="70" r="3" fill="#0284C7" />
+    
+    <!-- Target Crosshairs -->
+    <line x1="25" y1="70" x2="175" y2="70" stroke="#E2E8F0" stroke-width="0.8" />
+    <line x1="100" y1="-5" x2="100" y2="145" stroke="#E2E8F0" stroke-width="0.8" />
+    
+    <!-- Coordinate ticks -->
+    <path d="M 92 10 L 100 10 M 108 10 L 100 10 M 92 130 L 100 130 M 108 130 L 100 130" stroke="#0284C7" stroke-width="1" />
+    <path d="M 40 62 L 40 70 M 40 78 L 40 70 M 160 62 L 160 70 M 160 78 L 160 70" stroke="#0284C7" stroke-width="1" />
+
+    <!-- Technical Labels -->
+    <text x="100" y="156" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#0284C7" letter-spacing="1">SYS_KERNEL_OK</text>
+  </g>
+
+  <!-- Bottom Badges / Capabilities Bar -->
+  <g transform="translate(36, 268)">
+    <!-- Pillar 1: Systems -->
+    <rect x="0" y="0" width="170" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="14" cy="14" r="3" fill="#0284C7"/>
+    <text x="26" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">SYSTEMS &amp; DRIVERS</text>
+
+    <!-- Pillar 2: Software Engineering -->
+    <rect x="182" y="0" width="180" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="196" cy="14" r="3" fill="#059669"/>
+    <text x="208" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">BACKEND ARCHITECTURE</text>
+
+    <!-- Pillar 3: Applied AI -->
+    <rect x="374" y="0" width="176" height="28" rx="6" fill="rgba(241, 245, 249, 0.9)" stroke="#CBD5E1" stroke-width="1"/>
+    <circle cx="388" cy="14" r="3" fill="#7C3AED"/>
+    <text x="400" y="18" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="600" fill="#0F172A">MULTIMODAL STREAMING</text>
+
+    <!-- Core Languages Snippet -->
+    <text x="888" y="18" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" fill="#64748B">[ Go • C • TypeScript • Linux • Python ]</text>
+  </g>
+</svg>

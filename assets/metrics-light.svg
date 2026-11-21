@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="100%" height="100%">
+  <rect width="878" height="178" x="1" y="1" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Header -->
+  <g transform="translate(24, 26)">
+    <text x="0" y="0" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#0284C7" letter-spacing="1.5">TECHNICAL SIGNAL OVERVIEW</text>
+    <text x="210" y="0" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" fill="#64748B">// ACTIVE REPOSITORIES &amp; LANGUAGE DISTRIBUTION</text>
+  </g>
+
+  <!-- Left: Language Breakdown -->
+  <g transform="translate(24, 46)">
+    <rect width="400" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    
+    <!-- Language Bar -->
+    <g transform="translate(16, 18)">
+      <rect x="0" y="0" width="368" height="10" rx="4" fill="#334155"/>
+      <rect x="0" y="0" width="130" height="10" rx="4" fill="#0284C7"/>
+      <rect x="132" y="0" width="115" height="10" rx="0" fill="#7C3AED"/>
+      <rect x="249" y="0" width="65" height="10" rx="0" fill="#D97706"/>
+      <rect x="316" y="0" width="40" height="10" rx="0" fill="#059669"/>
+    </g>
+
+    <!-- Language Labels -->
+    <g transform="translate(16, 48)">
+      <!-- Go -->
+      <circle cx="4" cy="4" r="4" fill="#0284C7"/>
+      <text x="14" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">Go</text>
+      <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">35% (stream, memoir)</text>
+
+      <!-- TypeScript -->
+      <circle cx="104" cy="4" r="4" fill="#7C3AED"/>
+      <text x="114" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">TypeScript</text>
+      <text x="114" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">31% (ledger, dodo)</text>
+
+      <!-- C / Linux -->
+      <circle cx="214" cy="4" r="4" fill="#D97706"/>
+      <text x="224" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">C / Linux</text>
+      <text x="224" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">18% (libfprint-521d)</text>
+
+      <!-- Python / SQL -->
+      <circle cx="314" cy="4" r="4" fill="#059669"/>
+      <text x="324" y="8" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0F172A">Python/SQL</text>
+      <text x="324" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748B">16% (infra, scripts)</text>
+    </g>
+  </g>
+
+  <!-- Right: Architecture Metrics -->
+  <g transform="translate(444, 46)">
+    <rect width="412" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    
+    <g transform="translate(18, 22)">
+      <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#0F172A">Engineering Tenets</text>
+      
+      <g transform="translate(0, 16)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Zero-tolerance for False Accepts in Biometrics (0.0% FAR verified)</text>
+        <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Pure home-row keyboard ergonomics with Vim-style modal states</text>
+        <text x="0" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Sub-100ms real-time multimodal audio streaming over WebSockets</text>
+        <text x="0" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11" fill="#475569">• Offline-first local data structures with optimistic synchronization</text>
+      </g>
+    </g>
+  </g>
+</svg>
