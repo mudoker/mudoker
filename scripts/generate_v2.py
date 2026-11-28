@@ -48,7 +48,7 @@ def generate_icons(base_dir):
 # ==========================================
 
 def get_live_github_data(base_dir):
-    token = os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
+    token = os.environ.get('GH_PAT') or os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
     if not token:
         try:
             token = subprocess.run(['gh', 'auth', 'token'], capture_output=True, text=True).stdout.strip()
@@ -58,10 +58,20 @@ def get_live_github_data(base_dir):
     cache_file = os.path.join(base_dir, 'data', 'telemetry_cache.json')
     os.makedirs(os.path.join(base_dir, 'data'), exist_ok=True)
 
+    cached_data = None
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file) as f:
+                cached_data = json.load(f)
+        except Exception as e:
+            print("Warning reading cache:", e)
+
     data = None
     if token:
-        query = '''
-query {
+        # 1. viewer query (returns full profile + private repos if PAT / personal token)
+        # 2. user("mudoker") query (works with standard GITHUB_TOKEN in GitHub Actions)
+        queries = [
+            ('viewer', '''query {
   viewer {
     login
     contributionsCollection {
@@ -81,58 +91,104 @@ query {
         }
       }
     }
-    prs_merged: pullRequests(states: MERGED) {
-      totalCount
-    }
-    prs_open: pullRequests(states: OPEN) {
-      totalCount
-    }
-    prs_closed: pullRequests(states: CLOSED) {
-      totalCount
-    }
-    issues_closed: issues(states: CLOSED) {
-      totalCount
-    }
-    issues_open: issues(states: OPEN) {
-      totalCount
-    }
+    prs_merged: pullRequests(states: MERGED) { totalCount }
+    prs_open: pullRequests(states: OPEN) { totalCount }
+    prs_closed: pullRequests(states: CLOSED) { totalCount }
+    issues_closed: issues(states: CLOSED) { totalCount }
+    issues_open: issues(states: OPEN) { totalCount }
     repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
       nodes {
         name
         isPrivate
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-          edges {
-            size
-            node { name color }
-          }
+          edges { size node { name color } }
         }
       }
     }
   }
-}
-'''
-        try:
-            req = urllib.request.Request(
-                'https://api.github.com/graphql',
-                data=json.dumps({'query': query}).encode(),
-                headers={
-                    'Authorization': f'Bearer {token}',
-                    'User-Agent': 'Mudoker-Telemetry-Updater',
-                    'Content-Type': 'application/json'
-                }
-            )
-            with urllib.request.urlopen(req, timeout=12) as resp:
-                raw_json = json.loads(resp.read().decode())
-                if 'data' in raw_json and 'viewer' in raw_json['data']:
-                    data = raw_json['data']['viewer']
-                    with open(cache_file, 'w') as f:
-                        json.dump(data, f)
-        except Exception as e:
-            print('Live GraphQL fetch error, using cache:', e)
+}'''),
+            ('user', '''query {
+  user(login: "mudoker") {
+    login
+    contributionsCollection {
+      restrictedContributionsCount
+      totalCommitContributions
+      totalPullRequestContributions
+      totalPullRequestReviewContributions
+      totalRepositoryContributions
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+            weekday
+          }
+        }
+      }
+    }
+    prs_merged: pullRequests(states: MERGED) { totalCount }
+    prs_open: pullRequests(states: OPEN) { totalCount }
+    prs_closed: pullRequests(states: CLOSED) { totalCount }
+    issues_closed: issues(states: CLOSED) { totalCount }
+    issues_open: issues(states: OPEN) { totalCount }
+    repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
+      nodes {
+        name
+        isPrivate
+        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+          edges { size node { name color } }
+        }
+      }
+    }
+  }
+}''')
+        ]
 
-    if not data and os.path.exists(cache_file):
-        with open(cache_file) as f:
-            data = json.load(f)
+        for q_type, query in queries:
+            try:
+                req = urllib.request.Request(
+                    'https://api.github.com/graphql',
+                    data=json.dumps({'query': query}).encode(),
+                    headers={
+                        'Authorization': f'Bearer {token}',
+                        'User-Agent': 'Mudoker-Telemetry-Updater',
+                        'Content-Type': 'application/json'
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=12) as resp:
+                    raw_json = json.loads(resp.read().decode())
+                    if 'data' in raw_json and raw_json['data'] and raw_json['data'].get(q_type):
+                        res_obj = raw_json['data'][q_type]
+                        if res_obj.get('login') == 'mudoker':
+                            data = res_obj
+                            print(f"Successfully fetched live data via '{q_type}' query.")
+                            break
+                    if 'errors' in raw_json:
+                        print(f"GraphQL {q_type} notices:", [err.get('message') for err in raw_json['errors']])
+            except Exception as e:
+                print(f"Live GraphQL {q_type} fetch error:", e)
+
+    if data:
+        # If private repos are not visible in this query (e.g. running via bot GITHUB_TOKEN) but exist in cache, preserve them
+        if cached_data:
+            live_repos = data.get('repositories', {}).get('nodes', [])
+            has_private = any(r.get('isPrivate') for r in live_repos)
+            if not has_private:
+                cached_repos = cached_data.get('repositories', {}).get('nodes', [])
+                cached_private = [r for r in cached_repos if r.get('isPrivate')]
+                if cached_private:
+                    live_names = {r['name'] for r in live_repos}
+                    for pr in cached_private:
+                        if pr['name'] not in live_names:
+                            live_repos.append(pr)
+                    data['repositories']['nodes'] = live_repos
+
+        with open(cache_file, 'w') as f:
+            json.dump(data, f, indent=2)
+    elif cached_data:
+        print("Using cached data fallback.")
+        data = cached_data
 
     return data
 

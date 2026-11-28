@@ -2,13 +2,14 @@ name: Update Realtime Profile Telemetry
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+    - cron: '0 */3 * * *' # Runs every 3 hours
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI or CLI
   push:
     branches:
       - main
     paths:
       - 'scripts/**'
+      - '.github/workflows/**'
 
 permissions:
   contents: write
@@ -29,7 +30,7 @@ jobs:
 
       - name: Generate Live SVG Telemetry
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: |
           python scripts/generate_v2.py
 
