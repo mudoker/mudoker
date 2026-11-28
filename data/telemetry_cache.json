@@ -2,12 +2,12 @@
   "login": "mudoker",
   "contributionsCollection": {
     "restrictedContributionsCount": 1570,
-    "totalCommitContributions": 947,
+    "totalCommitContributions": 949,
     "totalPullRequestContributions": 11,
     "totalPullRequestReviewContributions": 2,
     "totalRepositoryContributions": 12,
     "contributionCalendar": {
-      "totalContributions": 2542,
+      "totalContributions": 2544,
       "weeks": [
         {
           "contributionDays": [
@@ -135,12 +135,12 @@
             },
             {
               "date": "2025-12-15",
-              "contributionCount": 0,
+              "contributionCount": 2,
               "weekday": 1
             },
             {
               "date": "2025-12-16",
-              "contributionCount": 9,
+              "contributionCount": 7,
               "weekday": 2
             },
             {
@@ -272,12 +272,12 @@
             },
             {
               "date": "2026-01-09",
-              "contributionCount": 24,
+              "contributionCount": 25,
               "weekday": 5
             },
             {
               "date": "2026-01-10",
-              "contributionCount": 47,
+              "contributionCount": 46,
               "weekday": 6
             }
           ]
@@ -2071,7 +2071,7 @@
             },
             {
               "date": "2026-11-28",
-              "contributionCount": 26,
+              "contributionCount": 28,
               "weekday": 6
             }
           ]
@@ -2080,19 +2080,19 @@
     }
   },
   "prs_merged": {
-    "totalCount": 271
+    "totalCount": 80
   },
   "prs_open": {
-    "totalCount": 4
+    "totalCount": 3
   },
   "prs_closed": {
-    "totalCount": 43
+    "totalCount": 21
   },
   "issues_closed": {
-    "totalCount": 37
+    "totalCount": 27
   },
   "issues_open": {
-    "totalCount": 33
+    "totalCount": 25
   },
   "repositories": {
     "nodes": [
@@ -2215,6 +2215,347 @@
         }
       },
       {
+        "name": "Snake_Game",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 411703,
+              "node": {
+                "name": "HTML",
+                "color": "#e34c26"
+              }
+            },
+            {
+              "size": 129988,
+              "node": {
+                "name": "TeX",
+                "color": "#3D6117"
+              }
+            },
+            {
+              "size": 12583,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "spring-be-todo-app",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 7395,
+              "node": {
+                "name": "Java",
+                "color": "#b07219"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "dodo",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 423871,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 7452,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 559,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ledger",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 1666780,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 7630,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            },
+            {
+              "size": 6398,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 3892,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 2892,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "memoir",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 121593,
+              "node": {
+                "name": "Go",
+                "color": "#00ADD8"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "stream",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 1204768,
+              "node": {
+                "name": "Go",
+                "color": "#00ADD8"
+              }
+            },
+            {
+              "size": 895,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 411,
+              "node": {
+                "name": "Just",
+                "color": "#384d54"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "mudoker-bot",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 305443,
+              "node": {
+                "name": "C++",
+                "color": "#f34b7d"
+              }
+            },
+            {
+              "size": 1902,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            },
+            {
+              "size": 567,
+              "node": {
+                "name": "CMake",
+                "color": "#DA3434"
+              }
+            },
+            {
+              "size": 279,
+              "node": {
+                "name": "Dockerfile",
+                "color": "#384d54"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "bua-nao-cafe",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 268149,
+              "node": {
+                "name": "TypeScript",
+                "color": "#3178c6"
+              }
+            },
+            {
+              "size": 7265,
+              "node": {
+                "name": "CSS",
+                "color": "#663399"
+              }
+            },
+            {
+              "size": 559,
+              "node": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "libfprint-goodix-521d",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 4053389,
+              "node": {
+                "name": "C",
+                "color": "#555555"
+              }
+            },
+            {
+              "size": 130038,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            },
+            {
+              "size": 39250,
+              "node": {
+                "name": "Meson",
+                "color": "#007800"
+              }
+            },
+            {
+              "size": 9303,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 1757,
+              "node": {
+                "name": "Lua",
+                "color": "#000080"
+              }
+            },
+            {
+              "size": 564,
+              "node": {
+                "name": "SmPL",
+                "color": "#c94949"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "mudoker",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 77821,
+              "node": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "minimalist-vim",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 90949,
+              "node": {
+                "name": "Lua",
+                "color": "#000080"
+              }
+            },
+            {
+              "size": 7703,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            },
+            {
+              "size": 633,
+              "node": {
+                "name": "Vim Script",
+                "color": "#199f4b"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "debtoarch",
+        "isPrivate": false,
+        "languages": {
+          "edges": [
+            {
+              "size": 49516,
+              "node": {
+                "name": "Rust",
+                "color": "#dea584"
+              }
+            },
+            {
+              "size": 15918,
+              "node": {
+                "name": "Shell",
+                "color": "#89e051"
+              }
+            }
+          ]
+        }
+      },
+      {
         "name": "City-Hunter",
         "isPrivate": true,
         "languages": {
@@ -2276,35 +2617,6 @@
               "node": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "Snake_Game",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 411703,
-              "node": {
-                "name": "HTML",
-                "color": "#e34c26"
-              }
-            },
-            {
-              "size": 129988,
-              "node": {
-                "name": "TeX",
-                "color": "#3D6117"
-              }
-            },
-            {
-              "size": 12583,
-              "node": {
-                "name": "Python",
-                "color": "#3572A5"
               }
             }
           ]
@@ -2565,21 +2877,6 @@
         }
       },
       {
-        "name": "spring-be-todo-app",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 7395,
-              "node": {
-                "name": "Java",
-                "color": "#b07219"
-              }
-            }
-          ]
-        }
-      },
-      {
         "name": "LeetCode",
         "isPrivate": true,
         "languages": {
@@ -2732,78 +3029,6 @@
         }
       },
       {
-        "name": "dodo",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 423871,
-              "node": {
-                "name": "TypeScript",
-                "color": "#3178c6"
-              }
-            },
-            {
-              "size": 7452,
-              "node": {
-                "name": "CSS",
-                "color": "#663399"
-              }
-            },
-            {
-              "size": 559,
-              "node": {
-                "name": "JavaScript",
-                "color": "#f1e05a"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "ledger",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 1666780,
-              "node": {
-                "name": "TypeScript",
-                "color": "#3178c6"
-              }
-            },
-            {
-              "size": 7630,
-              "node": {
-                "name": "JavaScript",
-                "color": "#f1e05a"
-              }
-            },
-            {
-              "size": 6398,
-              "node": {
-                "name": "CSS",
-                "color": "#663399"
-              }
-            },
-            {
-              "size": 3892,
-              "node": {
-                "name": "Shell",
-                "color": "#89e051"
-              }
-            },
-            {
-              "size": 2892,
-              "node": {
-                "name": "Python",
-                "color": "#3572A5"
-              }
-            }
-          ]
-        }
-      },
-      {
         "name": "kratos",
         "isPrivate": true,
         "languages": {
@@ -2861,115 +3086,6 @@
         }
       },
       {
-        "name": "memoir",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 121593,
-              "node": {
-                "name": "Go",
-                "color": "#00ADD8"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "stream",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 1204768,
-              "node": {
-                "name": "Go",
-                "color": "#00ADD8"
-              }
-            },
-            {
-              "size": 895,
-              "node": {
-                "name": "Shell",
-                "color": "#89e051"
-              }
-            },
-            {
-              "size": 411,
-              "node": {
-                "name": "Just",
-                "color": "#384d54"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "mudoker-bot",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 305443,
-              "node": {
-                "name": "C++",
-                "color": "#f34b7d"
-              }
-            },
-            {
-              "size": 1902,
-              "node": {
-                "name": "Python",
-                "color": "#3572A5"
-              }
-            },
-            {
-              "size": 567,
-              "node": {
-                "name": "CMake",
-                "color": "#DA3434"
-              }
-            },
-            {
-              "size": 279,
-              "node": {
-                "name": "Dockerfile",
-                "color": "#384d54"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "bua-nao-cafe",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 268149,
-              "node": {
-                "name": "TypeScript",
-                "color": "#3178c6"
-              }
-            },
-            {
-              "size": 7265,
-              "node": {
-                "name": "CSS",
-                "color": "#663399"
-              }
-            },
-            {
-              "size": 559,
-              "node": {
-                "name": "JavaScript",
-                "color": "#f1e05a"
-              }
-            }
-          ]
-        }
-      },
-      {
         "name": "void",
         "isPrivate": true,
         "languages": {
@@ -3011,122 +3127,6 @@
             },
             {
               "size": 774,
-              "node": {
-                "name": "Shell",
-                "color": "#89e051"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "libfprint-goodix-521d",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 4053389,
-              "node": {
-                "name": "C",
-                "color": "#555555"
-              }
-            },
-            {
-              "size": 130038,
-              "node": {
-                "name": "Python",
-                "color": "#3572A5"
-              }
-            },
-            {
-              "size": 39250,
-              "node": {
-                "name": "Meson",
-                "color": "#007800"
-              }
-            },
-            {
-              "size": 9303,
-              "node": {
-                "name": "Shell",
-                "color": "#89e051"
-              }
-            },
-            {
-              "size": 1757,
-              "node": {
-                "name": "Lua",
-                "color": "#000080"
-              }
-            },
-            {
-              "size": 564,
-              "node": {
-                "name": "SmPL",
-                "color": "#c94949"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "mudoker",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 77821,
-              "node": {
-                "name": "Python",
-                "color": "#3572A5"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "minimalist-vim",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 90949,
-              "node": {
-                "name": "Lua",
-                "color": "#000080"
-              }
-            },
-            {
-              "size": 7703,
-              "node": {
-                "name": "Shell",
-                "color": "#89e051"
-              }
-            },
-            {
-              "size": 633,
-              "node": {
-                "name": "Vim Script",
-                "color": "#199f4b"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "debtoarch",
-        "isPrivate": false,
-        "languages": {
-          "edges": [
-            {
-              "size": 49516,
-              "node": {
-                "name": "Rust",
-                "color": "#dea584"
-              }
-            },
-            {
-              "size": 15918,
               "node": {
                 "name": "Shell",
                 "color": "#89e051"
