@@ -986,10 +986,10 @@ def generate_telemetry(metrics, is_dark=True):
         else:
             dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.5" fill="{accent_blue}"/>\n'
 
-    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // 2-COLUMN LEGEND WITH GENEROUS BREATHING ROOM)
+    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // BALANCED SWEET-SPOT LAYOUT)
     cx_pie = 604
-    cy_pie = 144
-    r_pie = 35
+    cy_pie = 134
+    r_pie = 38
     current_angle = 0
     pie_paths = ''
     sep_color = card_bg
@@ -1010,11 +1010,11 @@ def generate_telemetry(metrics, is_dark=True):
             pie_paths += f'<path d="{d}" fill="{color}" stroke="{sep_color}" stroke-width="2"/>\n'
         current_angle += deg
 
-    # 2-column balanced legend: perfectly centered vertically with generous breathing room
+    # 2-column balanced legend: harmonious spacing below subtitle without being too far
     pie_legend = ''
     col1_x = 662
     col2_x = 794
-    y_starts = [118, 144, 170]
+    y_starts = [106, 130, 154]
 
     for idx, sl in enumerate(pie_slices):
         col_x = col1_x if idx < 3 else col2_x
@@ -1115,7 +1115,7 @@ def generate_telemetry(metrics, is_dark=True):
   <!-- Right: Top - Pie Chart Panel (Bounded x=542..936 // Truncated labels with ellipsis) -->
   <rect x="542" y="44" width="394" height="150" rx="8" fill="{card_bg}" stroke="{card_border}" stroke-width="1"/>
   <text x="558" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" font-weight="700" fill="{text_primary}">Language Composition</text>
-  <text x="558" y="78" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="{text_secondary}">PUBLIC &amp; PRIVATE CODEBASES // REALTIME COMPUTED</text>
+  <text x="558" y="80" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="{text_secondary}">PUBLIC &amp; PRIVATE CODEBASES // REALTIME COMPUTED</text>
 
   <!-- Pie Chart -->
   {pie_paths}
