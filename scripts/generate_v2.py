@@ -986,10 +986,10 @@ def generate_telemetry(metrics, is_dark=True):
         else:
             dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.5" fill="{accent_blue}"/>\n'
 
-    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // 2-COLUMN LEGEND WITH SPACED LAYOUT)
+    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // 2-COLUMN LEGEND WITH GENEROUS BREATHING ROOM)
     cx_pie = 604
-    cy_pie = 135
-    r_pie = 38
+    cy_pie = 144
+    r_pie = 35
     current_angle = 0
     pie_paths = ''
     sep_color = card_bg
@@ -1010,11 +1010,11 @@ def generate_telemetry(metrics, is_dark=True):
             pie_paths += f'<path d="{d}" fill="{color}" stroke="{sep_color}" stroke-width="2"/>\n'
         current_angle += deg
 
-    # 2-column balanced legend: up to 3 rows with clear breathing room
+    # 2-column balanced legend: perfectly centered vertically with generous breathing room
     pie_legend = ''
     col1_x = 662
     col2_x = 794
-    y_starts = [110, 131, 152]
+    y_starts = [118, 144, 170]
 
     for idx, sl in enumerate(pie_slices):
         col_x = col1_x if idx < 3 else col2_x
