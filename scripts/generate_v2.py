@@ -268,7 +268,7 @@ def parse_metrics(data):
         'total_prs': total_prs
     }
 
-    # 3. Language Breakdown across BOTH public and private repositories (NO repo names)
+    # 3. Language Breakdown across BOTH public and private repositories (Recognizing Rust and core languages)
     code_bytes = defaultdict(int)
     for r in repos:
         name = r['name']
@@ -282,15 +282,45 @@ def parse_metrics(data):
     total_code = sum(code_bytes.values()) or 1
     sorted_code = sorted(code_bytes.items(), key=lambda x: x[1], reverse=True)
 
-    palette = ['#38BDF8', '#34D399', '#A78BFA', '#FBBF24']
+    featured = []
+    featured_names = set()
+    for l, b in sorted_code:
+        if len(featured) < 4:
+            featured.append((l, b))
+            featured_names.add(l)
+
+    # Recognize Rust and common languages explicitly
+    if 'Rust' in code_bytes and 'Rust' not in featured_names:
+        featured.append(('Rust', code_bytes['Rust']))
+        featured_names.add('Rust')
+    else:
+        for l, b in sorted_code:
+            if l not in featured_names and len(featured) < 5:
+                featured.append((l, b))
+                featured_names.add(l)
+
+    palette_map = {
+        'C': '#38BDF8',
+        'TypeScript': '#34D399',
+        'Go': '#A78BFA',
+        'Python': '#FBBF24',
+        'Rust': '#FB923C',
+        'C++': '#60A5FA',
+        'JavaScript': '#FCD34D',
+        'Other': '#94A3B8'
+    }
+
     top_langs = []
     covered = 0
-    for idx, (l, b) in enumerate(sorted_code[:3]):
+    for l, b in featured:
         pct = round((b / total_code) * 100)
+        if b > 0 and pct == 0:
+            pct = 1  # Ensure active recognized language is visually represented
         covered += pct
-        top_langs.append({'name': truncate_ellipsis(l, 15), 'pct': pct, 'bytes': b, 'color': palette[idx]})
+        top_langs.append({'name': truncate_ellipsis(l, 14), 'pct': pct, 'bytes': b, 'color': palette_map.get(l, '#38BDF8')})
+
     other_pct = max(0, 100 - covered)
-    top_langs.append({'name': 'Python &amp; Other', 'pct': other_pct, 'bytes': 0, 'color': palette[3]})
+    top_langs.append({'name': 'Other', 'pct': other_pct, 'bytes': 0, 'color': palette_map['Other']})
 
     # 4. 12-Month Line Chart
     monthly = defaultdict(int)
@@ -956,20 +986,17 @@ def generate_telemetry(metrics, is_dark=True):
         else:
             dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.5" fill="{accent_blue}"/>\n'
 
-    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // TRUNCATED WITH ELLIPSIS)
-    cx_pie = 618
-    cy_pie = 126
-    r_pie = 44
+    # 2. Pie Chart (Public + Private Codebases // NO REPO NAMES // 2-COLUMN LEGEND WITH RUST & COMMON LANGUAGES)
+    cx_pie = 604
+    cy_pie = 124
+    r_pie = 42
     current_angle = 0
     pie_paths = ''
-    pie_legend = ''
-    legend_y = 92
     sep_color = card_bg
 
     for sl in pie_slices:
         pct = sl['pct']
         color = sl['color']
-        label = sl['name'] # already safely truncated with ellipsis
         deg = pct * 3.6
         if deg > 0:
             start_rad = math.radians(current_angle - 90)
@@ -981,16 +1008,27 @@ def generate_telemetry(metrics, is_dark=True):
             large_arc = 1 if deg > 180 else 0
             d = f'M {cx_pie} {cy_pie} L {x1:.2f} {y1:.2f} A {r_pie} {r_pie} 0 {large_arc} 1 {x2:.2f} {y2:.2f} Z'
             pie_paths += f'<path d="{d}" fill="{color}" stroke="{sep_color}" stroke-width="2"/>\n'
+        current_angle += deg
 
+    # 2-column balanced legend: up to 3 rows
+    pie_legend = ''
+    col1_x = 662
+    col2_x = 794
+    y_starts = [100, 122, 144]
+
+    for idx, sl in enumerate(pie_slices):
+        col_x = col1_x if idx < 3 else col2_x
+        row_y = y_starts[idx % 3]
+        color = sl['color']
+        label = sl['name']
+        pct = sl['pct']
         pie_legend += f'''
-        <g transform="translate(684, {legend_y})">
-          <rect x="0" y="0" width="8" height="8" rx="2" fill="{color}"/>
-          <text x="14" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="{text_primary}">{label}</text>
-          <text x="234" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="{color}">{pct}%</text>
+        <g transform="translate({col_x}, {row_y})">
+          <rect x="0" y="0" width="7" height="7" rx="2" fill="{color}"/>
+          <text x="13" y="7.5" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="9.5" font-weight="600" fill="{text_primary}">{label}</text>
+          <text x="115" y="7.5" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="{color}">{pct}%</text>
         </g>
         '''
-        legend_y += 18
-        current_angle += deg
 
     # 3. 14-Day Velocity Cadence Bar Chart (Bounded x=542..936, PERFECT SYMMETRIC MARGINS, ZERO OVERFLOW)
     days_14 = tel['days_14']
