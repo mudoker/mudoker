@@ -43,5 +43,6 @@ jobs:
             echo "No telemetry changes detected."
           else
             git commit -m "chore: update realtime telemetry metrics [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
